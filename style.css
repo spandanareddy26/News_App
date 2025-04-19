@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:gilroy;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: black;
+    transition: all 1s ease;
+}
+body.dark{
+  height: 100%;
+    width: 100%;
+    transition: all 1s ease;
+  background-color: #121212;
+  color: #ffff;
+}
+img{
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+button{
+    cursor: pointer;
+}
+#nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+body.dark #nav{
+  background-color: #1a1a1a;
+  box-shadow: 0 2px px rgba(255,255,255,0.2);
+}
+
+#time{
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666666;
+}
+body.dark #time {
+    color: #ccc;
+}
+.wrapper{
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.feed{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card{
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+body.dark .card {
+    background-color: #a6a5a5;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+ .card:hover{
+    transform: scale(1.02);
+} 
+.card i{
+    font-size: 24px;
+    cursor: pointer;
+    color: rgba(90, 87, 87, 0.698);
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.card .descp{
+    margin-top: 0.5rem;
+    color: #464141;
+}
+
+body.dark .card .descp {
+    color: #ddd;
+}
+button {
+  padding: 0.75rem 1.5rem;
+  margin: 1rem auto;
+  display: block;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.theme{
+  background-color: #dc9b02;
+}
+body.dark .theme{
+  background-color: #03a98a;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 600px;
+    margin: auto;
+  }
+}
